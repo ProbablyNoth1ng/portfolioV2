@@ -1,0 +1,375 @@
+@import "~bootstrap/scss/bootstrap";
+@import "mixin";
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+
+// $slick-font-path: "~slick-carousel/slick/fonts/";
+// $slick-loader-path: "~slick-carousel/slick/";
+// @import "~slick-carousel/slick/slick.scss";
+// @import "~slick-carousel/slick/slick-theme.scss";
+
+
+$colorTheme: #FF0653;
+$fontForGreeting: 50px;
+
+p,h1,h2,h3,h4,h5,h6,a,body{
+    margin: 0px;
+}
+body{
+    background-color: #161616;
+}
+.body,html{
+    height: 100%;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    text-decoration: none;
+}
+.main{
+    flex-grow: 1;
+}
+*{
+    box-sizing: border-box;
+}
+.inter{
+    font-family: "Inter";
+}
+.title{
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 32px;
+    color: #FFF;
+}
+.subtitle{
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 400;
+    color: #B6B6B6;
+}
+.current{
+    font-weight: 700 !important;
+}
+.my_button{
+    max-width: 370px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $colorTheme;
+    border-radius: 10px;
+    width: 100%;
+    border: 2px solid $colorTheme;
+    &:hover{
+        border: 2px solid blueviolet;
+    }
+}
+.arrow{
+    margin-left: 10px;
+    font-size: 40px;
+    color: white;
+}
+.nav_link{
+    text-decoration: none;
+}
+.header {
+    .nav__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        .nav__logo {
+            .logo {
+                font-weight: 700;
+                font-size: 24px;
+                color: #FFF;
+            }
+        }
+ 
+        .nav__body {
+            display: flex;
+            .header__nav_link {
+                margin: 0 10px;
+                font-weight: 400;
+                font-size: 20px;
+                color: #FFF;
+            }
+        }
+
+        .burger_icon {
+
+            @include media('min','md'){
+                display: none;
+            }
+        }
+    }
+
+}
+
+.greetings {
+    .greetings__container {
+        padding: 0px 0px;
+        display: flex;
+        justify-content: space-between;
+        .greetings__text_section {
+            padding-top: 40px;
+            position: relative;
+            .greetings__iam {
+                font-size: $fontForGreeting;
+
+
+            }
+            .greetings__profession {
+                line-height: 20px;
+                padding-bottom: 20px;
+                font-size: $fontForGreeting;
+            }
+            .greetings__nickname{
+                display: inline-block;
+                transform: translate(-3%, -5px) rotate(3deg);
+                padding: 0px 10px;
+                border-radius: 4px;
+                line-height: 60px;
+                background-color: $colorTheme;
+            }
+            .greetings__subtitle {
+                padding-top: 15px;
+                max-width: 500px;
+            }
+        }
+
+
+        .greetings__avatar {
+            .nickname {
+            }
+        }
+
+    }
+}
+
+
+.about_me {
+    background-color: #242424;
+    padding: 50px 0;
+    .about_me__container {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        .about_me__how_started > :not(:last-child) {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .about_me__how_started {
+            border-radius: 3px;
+            max-width: 450px;
+            position: absolute;
+            left: 0%;
+            transform: translate(0%, -50%);
+            padding: 70px 40px;
+            border: solid 4px #FF0653;
+
+            .about_me__title {
+            }
+            .about_me__subtitle {
+            }
+            .download_cv_button{
+
+            }
+
+        }
+
+        .about_me__experienced_web_dev {
+            .experienced_web_dev__title {
+            }
+            .experienced_web_dev__subtitle {
+            }
+        }
+
+    }
+
+}
+
+
+
+.my_technologies {
+    .my_technologies__container {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        .my_technologies__block {
+            max-width: 500px;
+            flex: 1 1 100%;
+            margin: 0 20px;
+            .my_technologies__block_technology {
+
+            }
+    
+            .my_technologies__title {
+                background-color: $colorTheme;
+                border-radius: 5px;
+                padding: 10px 0 10px 10px;
+            }
+            
+            .my_technologies__subtitle {
+                padding-top: 10px;
+            }
+
+            .my_technologies__block_version_control {
+
+            }
+
+        }
+
+    }
+
+}
+
+.my_skills{
+    padding: 30px 0 70px;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    @include media('min','xl'){
+        max-width: 1200px;
+    }
+    .skill {
+        position: relative;
+        padding: 20px 0 ;
+
+        .about__knowledge_of_skill{
+            display: flex;
+            justify-content: space-between;
+            .percent_text{
+                font-size: 30px;
+                color: white;
+            }
+            .about__name_of_skill{
+                @include media('min','md'){
+                    display: none;
+                }
+                @include media('max','md'){
+                    display: block;
+                }
+            }
+        }
+        .about__main_line{
+            display: flex;
+            align-items: center;
+            .about__main_line_inner {
+                display: flex;
+                height: 15px;
+                width: 100%;
+                background-color: #666666;
+                position: relative;
+                z-index: 0;
+                border-radius: 5px;
+            }
+            .about__second_line {
+                height: 15px;
+                background-color: $colorTheme;
+                position: relative;
+                z-index: 1;
+                border-radius: 5px;
+            }
+            .about__name_of_skill{
+
+                padding-left: 5px;
+                left: 100%;
+                position: absolute;
+                @include media('max','md'){
+                    display: none;
+                }
+            }
+            
+
+
+
+        }
+
+
+      
+    }
+    @include media('max','xl'){
+        padding-right: 50px;
+    }
+    @include media('max','md'){
+        padding-right: 0px;
+        width: 55%;
+        .about__name_of_skill {
+            font-size: 25px;
+        }
+       
+    }
+    
+}
+
+
+.footer {
+    padding: 100px 0;
+    background-color: #242424;
+    .footer__container > p {
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    .footer__container {
+        .my_button{
+            margin-top: 20px;
+            margin: 0 auto;
+        }
+        .footer__title {
+            text-align: center;
+            max-width: 450px;
+        }
+        .footer__subtitles {
+            text-align: center;
+            max-width: 660px;
+        }
+
+
+        .footer__nav_social {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            .link{
+                margin: 0 20px;
+            }
+            .footer__social_link {
+                color: white;
+                font-size: 50px;
+            }
+
+            .fa-brands {
+
+            }
+            .fa-github {
+            }
+
+            .fa-telegram {
+
+            }
+            .linkidin_bgc{
+                background-color: white;
+                border-radius: 50%;
+                width: 49px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .fa-linkedin-in {
+                color: #242424;
+                font-size: 30px;
+                margin: 0 !important;
+            }
+        }
+
+    }
+
+    
+}
