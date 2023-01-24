@@ -35,6 +35,9 @@ body{
 *{
     box-sizing: border-box;
 }
+.lock{
+    overflow: hidden;
+}
 .inter{
     font-family: "Inter";
 }
@@ -76,7 +79,106 @@ body{
 }
 .nav_link{
     text-decoration: none;
+    font-size: 20px;
 }
+
+//burger menu
+@include media('max','lg'){
+    .nav__body{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translate(-100%,0px);
+        background-color: rgba(0,0,0,0.9);
+        transition: all 0.4s ease 0s;
+        z-index: 1;
+        overflow-y: hidden;
+    }
+    .nav__body.active{
+        transform: translate(0px,0%);
+    }
+    .burger_icon{
+        width: 35px;
+        height: 25px;
+        cursor: pointer;
+        position: relative;
+        display: block;
+        z-index: 3;
+    }
+    .burger_icon span,
+    .burger_icon::before,
+    .burger_icon::after{
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 1s ease 0s;
+        background-color: white;
+        
+    }
+    .burger_icon::before,
+    .burger_icon::after{
+        content: "";
+    }
+    .burger_icon::before{
+        top: 0;
+    }
+    .burger_icon::after{
+        bottom: 0;
+    }
+    .burger_icon span {
+        top: 50%;
+        transform: scale(1) translate(0px,-50%);
+    }
+    .header__nav_links{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+    
+
+    
+    .burger_icon.active span{
+        transform: scale(0) translate(0px,-50%);
+    }
+    .burger_icon.active::before{
+        top:50%;
+        transform: rotate(-45deg) translate(0px,-50%);
+        
+    }
+    .burger_icon.active::after{
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px,50%);
+       
+    }
+
+    .header__nav_link {
+        font-size: 50px ;
+        padding-bottom: 10px;
+        @include media('max','md'){
+            font-size: 30px;    
+        }
+        @include media('max','sm'){
+            font-size: 18px;    
+        }
+    }
+    .header__nav_link::before{
+        bottom: 20px;
+        height: 5px;
+    }
+}
+
+
+
+
+
+
 .header {
     .nav__container {
         display: flex;
@@ -92,18 +194,22 @@ body{
         }
  
         .nav__body {
-            display: flex;
-            .header__nav_link {
-                margin: 0 10px;
-                font-weight: 400;
-                font-size: 20px;
-                color: #FFF;
+
+            .header__nav_links{
+                display: flex;
+                align-items: center;
+                .header__nav_link {
+                    margin: 0 10px;
+                    font-weight: 400;
+                    color: #FFF;
+                }
             }
+
         }
 
         .burger_icon {
 
-            @include media('min','md'){
+            @include media('min','lg'){
                 display: none;
             }
         }
@@ -320,7 +426,7 @@ body{
     }
     .footer__container {
         .my_button{
-            margin-top: 20px;
+            margin-top: 50px !important;
             margin: 0 auto;
         }
         .footer__title {

@@ -1,13 +1,11 @@
-import "../style/index.scss"
-import * as bootstrap from 'bootstrap'
-import * as fontawesome from '../icons/fontawesome-free-6.2.1-web/scss/fontawesome.scss'
+import "../style/index.scss";
+import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
-
 
 //import 'slick-carousel';
 import * as functions from "./functions.js"
 
-//functions.burgerClick();
+functions.burgerClick();
 
 
 document.querySelector('.html_front').style.width = document.querySelector('.html_front').dataset.html;
