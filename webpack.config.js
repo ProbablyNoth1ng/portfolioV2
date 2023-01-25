@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const loader = require('sass-loader');
 require('graceful-fs').gracefulify(require('fs'));
 
-const pages = ["index",];
+const pages = ["index",'projects'];
 
 module.exports = {
     

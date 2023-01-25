@@ -57,6 +57,7 @@ body{
     font-weight: 700 !important;
 }
 .my_button{
+    margin: 0 auto;
     max-width: 370px;
     color: white;
     font-size: 30px;
@@ -71,6 +72,10 @@ body{
     &:hover{
         border: 2px solid blueviolet;
     }
+    @include media('max','sm'){
+        max-width: 250px;
+        font-size: 25px;
+    }   
 }
 .arrow{
     margin-left: 10px;
@@ -222,6 +227,7 @@ body{
         padding: 0px 0px;
         display: flex;
         justify-content: space-between;
+      
         .greetings__text_section {
             padding-top: 40px;
             position: relative;
@@ -234,6 +240,9 @@ body{
                 line-height: 20px;
                 padding-bottom: 20px;
                 font-size: $fontForGreeting;
+                @include media('max','sm'){
+                    line-height: 40px;
+                }
             }
             .greetings__nickname{
                 display: inline-block;
@@ -254,6 +263,40 @@ body{
             .nickname {
             }
         }
+        @include media('max','lg'){
+            flex-direction: column;
+            .greetings__text_section > *{
+                text-align: center;
+                margin: 0 auto;
+            }
+            .greetings__avatar{
+                padding: 30px 0 200px;
+                display: flex;
+                justify-content: center;
+                .avatarImg{
+                    max-width: 400px;
+                    height: auto;
+                    @include media('max','sm'){
+                        max-width: 350px;
+                    }
+                }
+            }
+        }
+        .avatarImg{
+          
+        }
+        @media only screen and (max-width: 1200px) and (min-width: 991px) {
+            .greetings__text_section{
+                padding-right: 100px;
+                .greetings__iam{
+                    font-size: 40px;
+                } 
+                .greetings__profession {
+                    font-size: 37px;
+                }
+            }
+
+        }
 
     }
 }
@@ -266,9 +309,14 @@ body{
         position: relative;
         display: flex;
         justify-content: flex-end;
+        .about_me__how_started > *{
+            text-align: center;
+        }
         .about_me__how_started > :not(:last-child) {
             margin-bottom: 50px;
-            text-align: center;
+            @include media('max','lg'){
+                margin-bottom: 10px;
+            }
         }
         .about_me__how_started {
             border-radius: 3px;
@@ -286,7 +334,45 @@ body{
             .download_cv_button{
 
             }
-
+            @media only screen and (max-width: 1200px) and (min-width: 991px) {
+                padding: 40px 20px;
+                transform: translate(0%,-30%);
+            }
+           
+        }
+        @include media('max','lg'){
+            flex-direction: column;
+            .about_me__how_started{
+                padding: 40px 20px;
+                left: 50%;
+                top: 20%;
+                transform: translate(-50%, -80%);
+                flex: 0 0 auto;
+                width: 100%;
+            }
+            .about_me__experienced_web_dev > * {
+                text-align: center;
+            }
+            .about_me__experienced_web_dev {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 0 0 auto;
+                width: 100%;
+                padding-top: 350px;
+            }
+        }
+        @include media('max','sm'){
+            width: 80%;
+            .about_me__how_started{
+                padding: 10px 10px;
+            }
+            .about_me__title {
+                font-size: 25px;
+            }
+            .about_me__subtitle {
+                line-height: 35px;
+            }
         }
 
         .about_me__experienced_web_dev {
@@ -311,6 +397,9 @@ body{
             max-width: 500px;
             flex: 1 1 100%;
             margin: 0 20px;
+            @include media('md','lg'){
+                margin:  0 10px;
+            }
             .my_technologies__block_technology {
 
             }
@@ -318,7 +407,17 @@ body{
             .my_technologies__title {
                 background-color: $colorTheme;
                 border-radius: 5px;
-                padding: 10px 0 10px 10px;
+                padding: 10px 10px;
+                @include media('max','lg'){
+                    font-size: 25px;
+                }
+                @include media('max','md'){
+                    font-size: 20px;
+                    padding: 10px 20px;
+                    margin: 0 auto;
+                    display: inline;
+                }
+                
             }
             
             .my_technologies__subtitle {
@@ -328,9 +427,20 @@ body{
             .my_technologies__block_version_control {
 
             }
-
+            
+          
         }
-
+        @include media('max','md'){
+            flex-direction: column;
+            text-align: center;
+            .my_technologies__block > * {
+                text-align: center;
+            }  
+            .my_technologies__block{
+                padding-bottom: 40px;
+                margin: 0 auto;
+            }
+        }
     }
 
 }
