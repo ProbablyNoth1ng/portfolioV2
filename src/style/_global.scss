@@ -1,26 +1,29 @@
 @import "~bootstrap/scss/bootstrap";
 @import "mixin";
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
-
+@import 'variables';
 
 // $slick-font-path: "~slick-carousel/slick/fonts/";
 // $slick-loader-path: "~slick-carousel/slick/";
 // @import "~slick-carousel/slick/slick.scss";
 // @import "~slick-carousel/slick/slick-theme.scss";
 
-
-$colorTheme: #FF0653;
-$fontForGreeting: 50px;
-
+*{
+    box-sizing: border-box;
+}
 p,h1,h2,h3,h4,h5,h6,a,body{
     margin: 0px;
 }
 body{
     background-color: #161616;
+    scroll-behavior: smooth;
 }
-.body,html{
-    height: 100%;
+body,html{
+    height: 100%; 
 }
+body::-webkit-scrollbar { width: 0 !important }
+body{ overflow: -moz-scrollbars-none; }
+body{ -ms-overflow-style: none; }
 .wrapper{
     min-height: 100%;
     display: flex;
@@ -32,12 +35,12 @@ body{
 .main{
     flex-grow: 1;
 }
-*{
-    box-sizing: border-box;
-}
+
 .lock{
     overflow: hidden;
 }
+
+
 .inter{
     font-family: "Inter";
 }

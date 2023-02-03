@@ -1,0 +1,83 @@
+@import  'mixin'; 
+@import 'variables';
+.main {
+    .main_container{
+        padding: 50px 0;
+        .projects_title {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .my_projects {
+            display: flex;
+            justify-content: center;
+
+            .my_projects__cards {
+
+                gap: 40px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                @include media('max','md'){
+                    gap: 15px;
+                }
+                .my_card:hover {
+                    .technology_wrapper{
+                        visibility: visible;
+                        transition: .4s ease 0s;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        .my_card__text_technology {
+
+                        }
+                    }
+                    .my_card__img{
+                        filter: brightness(50%);
+                    }
+
+                }
+
+                .my_card {
+                    width: 45%;
+                    position: relative;
+                    .my_card__img{
+                        border-radius: 10px;
+                    }
+                    .technology_wrapper{
+                        visibility: hidden;
+                        top: -10%;
+                        left: 50%;
+                        transform: translate(-50%,0%);
+                        flex-wrap: wrap;
+                        display: flex;
+                        position: absolute;
+                        justify-content: center;
+                        @include media('max','xl'){
+                          width: 330px;
+                        }
+                        .my_card__text_technology {
+                            color: $colorTheme;
+                            padding: 8px 15px;
+                            margin: 10px 10px;
+                            background-color: rgba($color: white, $alpha: 0.9 );
+                            border-radius: 10px;
+                            @include media('max','lg'){
+                                margin: 5px 5px;
+                            }
+
+                        }
+                    }
+
+                    .inter {
+                    }
+                }
+    
+            }
+    
+        }
+    }
+
+
+    
+}
+
+
