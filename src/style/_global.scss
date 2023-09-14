@@ -81,7 +81,7 @@ body{ -ms-overflow-style: none; }
     }   
 }
 .arrow{
-    margin-left: 10px;
+    margin-right: 20px;
     font-size: 40px;
     color: white;
 }
@@ -183,43 +183,90 @@ body{ -ms-overflow-style: none; }
 }
 
 
-
-
-
+.logo_img{
+    width: 100px;
+}
+.header_icon{
+    font-size: 20px;
+    color: white;
+}
+.forIcon{
+    font-size: 25px !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white !important;
+    color: #242424 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
 
 .header {
+    background-color: #242424;
+  
     .nav__container {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         padding: 30px 0;
         .nav__logo {
             .logo {
                 font-weight: 700;
                 font-size: 24px;
                 color: #FFF;
+               
             }
         }
- 
+        .fa-telegram{
+            color: white;
+            font-size: 50px;
+        
+        }
         .nav__body {
 
             .header__nav_links{
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 .header__nav_link {
                     margin: 0 10px;
                     font-weight: 400;
                     color: #FFF;
                 }
             }
+          
+            
+   
+            .footer__social_link {
+            }
+            .fa-twitter {
+                
+            }
+            .fa-discord {
+                
+            }
+            
 
         }
-
+        .nav__socials {
+            .txt{
+                margin-right: 0px !important;
+            }
+        }
+        .nav__socials  >  .link {
+            margin: 0 15px;
+            
+        }
         .burger_icon {
 
             @include media('min','lg'){
                 display: none;
             }
+        }
+        .nav__socials{
+            display: flex;
+            justify-content: flex-end;
         }
     }
 
@@ -322,7 +369,7 @@ body{ -ms-overflow-style: none; }
             }
         }
         .about_me__how_started {
-            border-radius: 3px;
+            -webkit-border-radius: 20px;
             max-width: 450px;
             position: absolute;
             left: 0%;
@@ -392,41 +439,68 @@ body{ -ms-overflow-style: none; }
 
 
 .my_technologies {
-    .my_technologies__container {
-        padding-top: 100px;
+    .fa-caret-up{
+        display: flex;
+        align-items: center;
+    }
+    .my_technologies_paragraph{
+        padding-top: 20px;
         display: flex;
         justify-content: center;
+        opacity: 50%;
+        .turnUpLeft{
+            transform: rotateY(180deg);
+        }
+    }
+    .my_technologies__container {
+        padding: 100px 0 0 50px;
+        
+        .my_technologies__title {
+            display: flex;
+            justify-content: center;
+            background-color: $colorTheme;
+            border-radius: 5px;
+            padding: 10px 10px;
+            @include media('max','lg'){
+                font-size: 25px;
+            }
+            @include media('max','md'){
+                font-size: 20px;
+                padding: 10px 20px;
+                margin: 0 auto;
+                display: inline;
+            }
+        }
         .my_technologies__block {
-            max-width: 500px;
-            flex: 1 1 100%;
-            margin: 0 20px;
+            
+        
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
             @include media('md','lg'){
                 margin:  0 10px;
             }
-            .my_technologies__block_technology {
-
+            .my_technologies__btn {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 10px;
+                border: 1px solid #FF0653;
+                background-color: transparent;
             }
-    
-            .my_technologies__title {
-                background-color: $colorTheme;
-                border-radius: 5px;
-                padding: 10px 10px;
-                @include media('max','lg'){
-                    font-size: 25px;
-                }
-                @include media('max','md'){
-                    font-size: 20px;
-                    padding: 10px 20px;
-                    margin: 0 auto;
-                    display: inline;
-                }
+            .my_technologies__btn:hover{
+                transition: border 2s ease-out 100ms;
+                border: 1px solid purple;
+            }
+            .my_technologies__block_technology {
+                
                 
             }
+    
             
-            .my_technologies__subtitle {
-                padding-top: 10px;
-            }
-
+        
+            
+            
             .my_technologies__block_version_control {
 
             }
@@ -531,7 +605,7 @@ body{ -ms-overflow-style: none; }
 
 
 .footer {
-    padding: 100px 0;
+    padding: 100px 0 0 0;
     background-color: #242424;
     .footer__container > p {
         margin: 0 auto;
@@ -539,7 +613,7 @@ body{ -ms-overflow-style: none; }
     }
     .footer__container {
         .my_button{
-            margin-top: 50px !important;
+            margin-bottom: 20px !important;
             margin: 0 auto;
         }
         .footer__title {
@@ -553,7 +627,7 @@ body{ -ms-overflow-style: none; }
 
 
         .footer__nav_social {
-            margin-top: 50px;
+            
             display: flex;
             justify-content: center;
             .link{
@@ -589,6 +663,116 @@ body{ -ms-overflow-style: none; }
         }
 
     }
-
+    .footer__down{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        .footer__down_text{
+            color: white;
+        }
+    }
     
 }
+
+
+    .main_container{
+        padding: 50px 0;
+        .projects_title {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-color: #FF0653;
+            border-radius: 5px;
+            padding: 10px 10px;
+            margin: 100px 0;
+        }
+        .my_projects {
+            display: flex;
+            justify-content: center;
+
+            .my_projects__cards {
+
+                gap: 40px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                @include media('max','md'){
+                    gap: 15px;
+                }
+                .my_card:hover {
+                    .technology_wrapper{
+                        visibility: visible;
+                        transition: .4s ease 0s;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        .my_card__text_technology {
+
+                        }
+                    }
+                    .my_card__img{
+                        filter: brightness(50%);
+                    }
+
+                }
+
+                .my_card {
+                    width: 45%;
+                    position: relative;
+                    .my_card__img{
+                        border-radius: 10px;
+                    }
+                    .technology_wrapper{
+                        visibility: hidden;
+                        top: -10%;
+                        left: 50%;
+                        transform: translate(-50%,0%);
+                        flex-wrap: wrap;
+                        display: flex;
+                        position: absolute;
+                        justify-content: center;
+                        @include media('max','xl'){
+                          width: 330px;
+                        }
+                        .my_card__text_technology {
+                            color: $colorTheme;
+                            padding: 8px 15px;
+                            margin: 10px 10px;
+                            background-color: rgba($color: white, $alpha: 0.9 );
+                            border-radius: 10px;
+                            @include media('max','lg'){
+                                margin: 5px 5px;
+                            }
+
+                        }
+                    }
+
+                    .inter {
+                    }
+                }
+    
+            }
+    
+        }
+    }
+
+
+    
+
+
+
+
+    @keyframes flying_icons__animation {
+        0%   {transform: translate(0,0);}
+        100% {transform: translate(0,-11000px);}
+      }
+
+    .flying_icon{
+        display: flex;
+        position: absolute;
+      //  transition: top 15s ease 0s ;
+        
+        animation-name: flying_icons__animation;
+        animation-duration: 15s;  
+        animation-fill-mode: forwards;
+    }

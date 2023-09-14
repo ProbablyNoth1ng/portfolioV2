@@ -2,9 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const loader = require('sass-loader');
-require('graceful-fs').gracefulify(require('fs'));
 
-const pages = ["index",'projects'];
+
+const pages = ["index",];
 
 module.exports = {
     
@@ -76,10 +76,10 @@ module.exports = {
       {
         
           test:/\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource'
-
+          type: 'asset/resource',
+        
       },
-      
+       
   ]},
   
 };

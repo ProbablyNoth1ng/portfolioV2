@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="./src/assets/4smal.png" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
@@ -11,17 +12,22 @@
         <header class="header">
             <nav class="nav__container container">
                 <div class="nav__logo">
-                    <a href="index.html" class="logo inter nav_link">CODDIE2d</a>
+                    <a href="index.html" class="logo inter nav_link"> <img src="./src/assets/Group 1logo.png" alt="" class="logo_img"></a>
                 </div>
                 <div class="nav__body">
                     <div class="header__nav_links">
-                        <a href="index.html" class="nav_link header__nav_link current inter">Home</a>
-                        <a href="projects.html" class="nav_link header__nav_link inter">Projects</a>
+                        <a href="index.html" class="nav_link header__nav_link inter">Home</a>
+                        <a href="#projects" class="nav_link header__nav_link inter ">Projects</a>
                         <a href="#contact" class="nav_link header__nav_link inter">Contact</a>
-                    </div>
+                    </div>  
                 </div>
                 <div class="burger_icon">
                     <span></span>
+                </div>
+                <div class="nav__socials">
+                    <a href="https://discord.com/users/325246543550611456" class="link"><i class="fa-brands fa-discord header_icon "></i> </a>
+                    <a href="https://t.me/Codddie" class="link"> <i class="fa-solid fa-paper-plane header_icon"></i> </a>
+                    <a href="https://twitter.com/Coddie2d" class="link twt"> <i class="fa-brands fa-twitter  header_icon"></i> </a>
                 </div>
             </nav>
         </header>
@@ -31,10 +37,10 @@
                     <section class="greetings__text_section">
                         <p class="greetings__iam title "> Hi, I am <span class="greetings__nickname">CODDIE</span></p>
                         <p class="greetings__profession title">Frontend Developer</p>
-                        <p class="greetings__subtitle subtitle">I am a Frontend Developer from Kyiv, Ukraine. Crafting and upgrading beautiful websites that helps your business grow online. I build things for the web.</p>
+                        <p class="greetings__subtitle subtitle">I am a Frontend Developer from Poznan, Poland. Crafting and upgrading beautiful websites that helps your business grow online. I build things for the web.</p>
                     </section>
                     <section class="greetings__avatar">
-                        <img src="src/images/ava.jpg" class="img-fluid avatarImg" alt="avatarImg ">
+                        <img src="src/assets/ava.jpg" class="img-fluid avatarImg" alt="avatarImg ">
                       
                     </section>
                 </div>
@@ -44,7 +50,7 @@
                     <div class="about_me__how_started col-6">
                         <p class="about_me__title title">When did it all started?</p>
                         <p class="about_me__subtitle subtitle">I started liking web development when I was in 2nd year high school. I started wondering how do websites created. From there, I decided what course I am going to take.  </p>
-                        <button class="my_button download_cv_button">Download CV <i class="fa-solid fa-arrow-right-long arrow"></i></button>
+                        <a href="#projects" class="my_button download_cv_button link">Check my projects <i class="fa-solid fa-down-long arrow"></i></a>
                     </div>
                     <div class="about_me__experienced_web_dev col-6">
                         <p class="experienced_web_dev__title title">An experienced web developer too...</p>
@@ -54,68 +60,92 @@
             </section>
             <section class="my_technologies">
                 <div class="my_technologies__container container">
+                    <p  class="my_technologies__title title">Technologies which I use </p>
                     <div class="my_technologies__block  my_technologies__block_technology">
-                        <p  class="my_technologies__title title">TECHNOLOGY</p>
-                        <p  class="my_technologies__subtitle subtitle">HTML5, CSS3, SASS, Flexbox, Grid, Bootstrap 5, Javascript, jQuery, </p>
+                              
+                        <button  class="my_technologies__btn subtitle react">React</button>
+                        <button  class="my_technologies__btn subtitle html">HTML5</button>
+                        <button  class="my_technologies__btn subtitle css">CSS3(SASS)</button>
+                        <button  class="my_technologies__btn subtitle bootstrap5">Bootstrap 5</button>
+                        <button  class="my_technologies__btn subtitle js">Javascript</button>
+                        <button  class="my_technologies__btn subtitle webpack">Webpack</button>
+                        <button  class="my_technologies__btn subtitle vite">Vite</button>
                     </div> 
-                    <div class="my_technologies__block  my_technologies__block_version_control">
-                        <p  class="my_technologies__title title">VERSION CONTROL</p>
-                        <p  class="my_technologies__subtitle subtitle">Git, Gitlab</p>
-                    </div> 
+                
                 </div>  
+                <p class="title  my_technologies_paragraph">  <i class="fa-solid fa-turn-up turnUpLeft"></i> &nbsp; Click the buttons above  &nbsp;<i class="fa-solid fa-turn-up"></i> </p>
             </section>
             
-            <section class="my_skills">
-                <div class="skill">
-                    <div class="about__knowledge_of_skill">
-                        <p class=" percent_text inter">99%</p>
-                        <p class="about__name_of_skill title">html</p>    
-                    </div>
+            <section class="projects" id="projects">
+                <div class="main_container container">
+                    <p class="title projects_title">My projects</p>
+                    <div class="my_projects">
+                        <div class="my_projects__cards">
 
-                    <div class="about__main_line ">
-                        <div class="about__main_line_inner"  data-back="100%">
-                            <div class="about__second_line html_front"   data-html="95%"> </div>
-                        </div>
-                            <p class="about__name_of_skill title">html</p>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="about__knowledge_of_skill">
-                        <p class=" percent_text inter">90%</p>
-                        <p class="about__name_of_skill title">scss</p>    
-                    </div>
+                            <div class="my_card">
+                                <a href="https://www.massons.xyz/"><img src="src/assets/massons.png" alt="blogImg" class="my_card__img img-fluid"></a>
+                                <div class="technology_wrapper">
+                                    <p class="my_card__text_technology inter">react</p>
+                                    <p class="my_card__text_technology inter">html</p>
+                                    <p class="my_card__text_technology inter">css</p>
+                                    <p class="my_card__text_technology inter">js</p>
+                                    <p class="my_card__text_technology inter">vite</p>
+                                </div>
+                            </div>
 
-                    <div class="about__main_line">
-                        <div class="about__main_line_inner"  data-scss-back="100%" >
-                            <div class="about__second_line scss_front"  data-scss="90%"> </div>
-                        </div>
-                            <p class="about__name_of_skill title">scss</p>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="about__knowledge_of_skill">
-                        <p class=" percent_text inter">80%</p>
-                        <p class="about__name_of_skill title">javascript</p>    
-                    </div>
+                            <div class="my_card">
+                                <a href="https://coddie2d.github.io/RogerHaus-webpage/"><img src="src/assets/roger.jpg" alt="blogImg" class="my_card__img img-fluid"></a>
+                                <div class="technology_wrapper">
+                                    <p class="my_card__text_technology inter">html</p>
+                                    <p class="my_card__text_technology inter">css</p>
+                                    <p class="my_card__text_technology inter">js</p>
+                                </div>
+                            </div>
 
-                    <div class="about__main_line">
-                        <div class="about__main_line_inner "  >
-                            <div class="about__second_line javascript_front"  data-js="90%"> </div>
-                        </div>
-                            <p class="about__name_of_skill title">javascript</p>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="about__knowledge_of_skill">
-                        <p class=" percent_text inter">80%</p>
-                        <p class="about__name_of_skill title">webpack</p>    
-                    </div>
+                            <div class="my_card">
+                                <a href=""><img src="src/assets/digitalAgency.jpg" alt="blogImg" class="my_card__img img-fluid"></a>
+                                <div class="technology_wrapper">
+                                    <p class="my_card__text_technology inter">html</p>
+                                    <p class="my_card__text_technology inter">scss</p>
+                                    <p class="my_card__text_technology inter">js</p>
+                                    <p class="my_card__text_technology inter">bootstrap</p>
+                                    <p class="my_card__text_technology inter">webpack</p>
+                                </div>
+                            </div>
 
-                    <div class="about__main_line">
-                        <div class="about__main_line_inner"  data-webpack-back="100%">
-                            <div class="about__second_line webpack_front"  data-webpack="90%"> </div>
+                            <div class="my_card">
+                                <a href="https://coddie2d.github.io/Shelter-Webpage/"><img src="src/assets/shelter.jpg" alt="blogImg" class="my_card__img img-fluid"></a>
+                                <div class="technology_wrapper">
+                                    <p class="my_card__text_technology inter">html</p>
+                                    <p class="my_card__text_technology inter">css</p>
+                                    <p class="my_card__text_technology inter">js</p>
+                                    <p class="my_card__text_technology inter">bootstrap</p>
+    
+                                </div>
+                            </div>
+                            <div class="my_card">
+                                <a href="https://coddie2d.github.io/gaming_platform/"><img src="src/assets/gamedevelopment.png" alt="blogImg" class="my_card__img img-fluid"></a>
+                                <div class="technology_wrapper">
+                                    <p class="my_card__text_technology inter">html</p>
+                                    <p class="my_card__text_technology inter">scss</p>
+                                    <p class="my_card__text_technology inter">js</p>
+                                    <p class="my_card__text_technology inter">bootstrap</p>
+                                    <p class="my_card__text_technology inter">webpack</p>
+                                </div>
+                            </div>
+                        
+                          
+                            <div class="my_card">
+                                <a href="https://coddie2d.github.io/Medical-webpage/"><img src="src/assets/Medical.jpg" alt="blogImg" class="my_card__img img-fluid"></a>
+                                <div class="technology_wrapper">
+                                    <p class="my_card__text_technology inter">html</p>
+                                    <p class="my_card__text_technology inter">css</p>
+                                    <p class="my_card__text_technology inter">js</p>
+                                </div>
+                            </div>
+                           
+                            
                         </div>
-                            <p class="about__name_of_skill title">webpack</p>
                     </div>
                 </div>
             </section>
@@ -123,19 +153,29 @@
         <footer class="footer" id="contact">
             <div class="footer__container container">
                 <p class="footer__title title">LET’S WORK TOGETHER!</p>
-                <p class="footer__subtitles subtitle">I am currently searching for new opportunities in web development. I am open to both remote and on-site job options, and am available for full-time or freelance opportunities. If you have any openings in web development. I’ll try my best to get back to you, please contact me. </p>
+                
                 <a href="mailto:android.kaplan@gmail.com" class="link"><button class="my_button ">Send an email <i class="fa-solid fa-arrow-right-long arrow"></i></button></a>
                 
-                <div class="footer__nav_social">
-                    <a href="https://github.com/Coddie2d" class="link"><i class="fa-brands fa-github footer__social_link"></i></a>
-                    <a href="https://t.me/And3rey" class="link"><i class="fa-brands fa-telegram footer__social_link" ></i></a>
-                    <a href="" class="link linkidin_bgc"><i class="fa-brands fa-linkedin-in footer__social_link"></i></a>
+               
+                <div class="footer__down">
+                    <a href="index.html" class="logo inter nav_link"> <img src="./src/assets/Group 1logo.png" alt="" class="logo_img"></a>
+                    <div class="footer__nav_social">
+                        <a href="https://github.com/Coddie2d" class="link"><i class="fa-brands fa-github footer__social_link"></i></a>
+                        <a href="https://discord.com/users/325246543550611456" class="link"><i class="fa-brands fa-discord footer__social_link forIcon"></i> </a>
+                        <a href="https://t.me/Codddie" class="link"><i class="fa-brands fa-telegram footer__social_link" ></i></a>
+                        <a href="https://twitter.com/Coddie2d" class="link"> <i class="fa-brands fa-twitter footer__social_link forIcon"></i> </a>
+                        <a href="" class="link linkidin_bgc"><i class="fa-brands fa-linkedin-in footer__social_link"></i></a>
+                    </div>
+                    
+                    <p class="footer__down_text inter">Made by Coddie</p>
                 </div>
-            
             </div>
-
+          
         </footer>
     </div>
+    <script >
+        
+    </script>
     <script src="https://kit.fontawesome.com/f12a45434c.js" crossorigin="anonymous"></script>  
 </body>
 </html>

@@ -1,6 +1,7 @@
 export let burgerMenu = document.querySelector('.burger_icon');
 export let navBody = document.querySelector('.nav__body');
 export let navLinks = document.querySelectorAll('.header__nav_link');
+
 export function burgerClick(){
     
 if(burgerMenu){
