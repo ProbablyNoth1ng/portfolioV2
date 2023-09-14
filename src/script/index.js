@@ -2,14 +2,14 @@ import "../style/index.scss";
 import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
 
-import react from '../assets/icons/react.png'
-import html from '../assets/icons/html.png'
-import css from '../assets/icons/css.png'
-import sass from '../assets/icons/sass.png'
-import bootstrap5 from '../assets/icons/bootstrap.png'
-import js from '../assets/icons/js.png'
-import webpack from '../assets/icons/webpack.png'
-import vite from '../assets/icons/vite.png'
+import react from '../assets/react.png'
+import html from '../assets/html.png'
+import css from '../assets/css.png'
+import sass from '../assets/sass.png'
+import bootstrap5 from '../assets/bootstrap.png'
+import js from '../assets/js.png'
+import webpack from '../assets/webpack.png'
+import vite from '../assets/vite.png'
 
 
 //import 'slick-carousel';
